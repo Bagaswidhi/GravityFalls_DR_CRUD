@@ -40,6 +40,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbJK = new System.Windows.Forms.ComboBox();
             this.dptTanggalLahir = new System.Windows.Forms.DateTimePicker();
+            this.btnConnect = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -141,11 +148,72 @@
             this.dptTanggalLahir.Size = new System.Drawing.Size(200, 22);
             this.dptTanggalLahir.TabIndex = 12;
             // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(658, 47);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(130, 23);
+            this.btnConnect.TabIndex = 13;
+            this.btnConnect.Text = "Membuka Koneksi";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(658, 77);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(130, 23);
+            this.btnLoad.TabIndex = 14;
+            this.btnLoad.Text = "Menampilkan Data";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.Location = new System.Drawing.Point(658, 106);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(130, 23);
+            this.btnInsert.TabIndex = 15;
+            this.btnInsert.Text = "Menambah Data";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(658, 138);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(130, 36);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Mengubah Data";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(658, 180);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(130, 30);
+            this.btnDelete.TabIndex = 17;
+            this.btnDelete.Text = "Menghapus Data";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 297);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(773, 141);
+            this.dataGridView1.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.dptTanggalLahir);
             this.Controls.Add(this.cmbJK);
             this.Controls.Add(this.label6);
@@ -160,6 +228,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,6 +248,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbJK;
         private System.Windows.Forms.DateTimePicker dptTanggalLahir;
+        private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
