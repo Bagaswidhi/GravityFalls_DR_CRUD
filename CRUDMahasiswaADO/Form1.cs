@@ -86,29 +86,29 @@ namespace CRUDMahasiswaADO
         {
             try
             {
-                if(conn.State == System.Data.ConnectionState.Closed)
+                if (conn.State == System.Data.ConnectionState.Closed)
                 {
                     conn.Open();
                 }
-                if(txtNIM.Text == "")
+                if (txtNIM.Text == "")
                 {
                     MessageBox.Show("NIM Harus diisi");
                     txtNIM.Focus();
                     return;
                 }
-                if(txtNama.Text == "")
+                if (txtNama.Text == "")
                 {
                     MessageBox.Show("Nama Harus diisi");
                     txtNama.Focus();
                     return;
                 }
-                if(cmbJK.Text == "")
+                if (cmbJK.Text == "")
                 {
                     MessageBox.Show("Jenis Kelamin Harus dipilih");
                     cmbJK.Focus();
                     return;
                 }
-                if(txtKodeProdi.Text == "")
+                if (txtKodeProdi.Text == "")
                 {
                     MessageBox.Show("Kode Prodi Harus diisi");
                     txtKodeProdi.Focus();
@@ -144,5 +144,46 @@ namespace CRUDMahasiswaADO
                 MessageBox.Show("Terjadi Kesalahan: " + ex.Message);
             }
         }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                string query = @"UPDATE Mahasiswa SET Nama = @Nama, 
+                                                      JenisKelamin = @JK, 
+                                                      TanggalLahir = @TanggalLahir, 
+                                                      Alamat = @Alamat, 
+                                                      KodeProdi = @KodeProdi 
+                                                      WHERE NIM = @NIM";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@NIM", txtNIM.Text);
+                cmd.Parameters.AddWithValue("@Nama", txtNama.Text);
+                cmd.Parameters.AddWithValue("@JK", cmbJK.Text);
+                cmd.Parameters.AddWithValue("@TanggalLahir", dtpTanggalLahir.Value.Date);
+                cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
+                cmd.Parameters.AddWithValue("@KodeProdi", txtKodeProdi.Text);
+
+                int result = cmd.ExecuteNonQuery();
+
+                if (result > 0)
+                {
+                    MessageBox.Show("Data berhasil diupdate");
+                    ClearForm();
+                    btnLoad.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Gagal mengupdate data");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi Kesalahan: " + ex.Message);
+            }
+        }
     }
-}
