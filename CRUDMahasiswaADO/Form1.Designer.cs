@@ -34,12 +34,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNama = new System.Windows.Forms.TextBox();
             this.txtAlamat = new System.Windows.Forms.TextBox();
             this.txtKodeProdi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbJK = new System.Windows.Forms.ComboBox();
-            this.dptTanggalLahir = new System.Windows.Forms.DateTimePicker();
+            this.dtpTanggalLahir = new System.Windows.Forms.DateTimePicker();
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
@@ -102,12 +102,12 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Alamat";
             // 
-            // textBox1
+            // txtNama
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(527, 22);
-            this.textBox1.TabIndex = 6;
+            this.txtNama.Location = new System.Drawing.Point(125, 76);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(527, 22);
+            this.txtNama.TabIndex = 6;
             // 
             // txtAlamat
             // 
@@ -141,12 +141,12 @@
             this.cmbJK.Size = new System.Drawing.Size(121, 24);
             this.cmbJK.TabIndex = 11;
             // 
-            // dptTanggalLahir
+            // dtpTanggalLahir
             // 
-            this.dptTanggalLahir.Location = new System.Drawing.Point(125, 136);
-            this.dptTanggalLahir.Name = "dptTanggalLahir";
-            this.dptTanggalLahir.Size = new System.Drawing.Size(200, 22);
-            this.dptTanggalLahir.TabIndex = 12;
+            this.dtpTanggalLahir.Location = new System.Drawing.Point(125, 136);
+            this.dtpTanggalLahir.Name = "dtpTanggalLahir";
+            this.dtpTanggalLahir.Size = new System.Drawing.Size(200, 22);
+            this.dtpTanggalLahir.TabIndex = 12;
             // 
             // btnConnect
             // 
@@ -176,6 +176,7 @@
             this.btnInsert.TabIndex = 15;
             this.btnInsert.Text = "Menambah Data";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnUpdate
             // 
@@ -216,12 +217,12 @@
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnConnect);
-            this.Controls.Add(this.dptTanggalLahir);
+            this.Controls.Add(this.dtpTanggalLahir);
             this.Controls.Add(this.cmbJK);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtKodeProdi);
             this.Controls.Add(this.txtAlamat);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNama);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -244,12 +245,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNama;
         private System.Windows.Forms.TextBox txtAlamat;
         private System.Windows.Forms.TextBox txtKodeProdi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbJK;
-        private System.Windows.Forms.DateTimePicker dptTanggalLahir;
+        private System.Windows.Forms.DateTimePicker dtpTanggalLahir;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnInsert;
